@@ -1,0 +1,10 @@
+{
+  "id": "wechat-capture",
+  "name": "Wechat Capture",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "提取微信公众号文章全文并保存为 Markdown 笔记。",
+  "author": "lyxdream",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

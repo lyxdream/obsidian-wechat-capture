@@ -1,0 +1,21 @@
+.wechat-capture-modal .wechat-capture-hint {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-bottom: 12px;
+}
+
+.wechat-capture-modal .wechat-capture-input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+
+.wechat-capture-modal .wechat-capture-btn-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}

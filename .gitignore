@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output (发布 Release 时再上传 main.js)
+main.js
+main.js.map
+
+# Local / OS
+.DS_Store
+*.log
+Thumbs.db
+
+# 插件运行时配置（保存在 Obsidian 库的 .obsidian/plugins/ 下，不应进仓库）
+data.json
+
+# IDE
+.idea/
+.vscode/
+*.swp

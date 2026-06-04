@@ -1,0 +1,37 @@
+{
+  "name": "obsidian-wechat-capture",
+  "version": "1.0.0",
+  "description": "Obsidian 插件：提取微信公众号文章到笔记库",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "wechat",
+    "wechat-capture"
+  ],
+  "author": "lyxdream",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyxdream/obsidian-wechat-capture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lyxdream/obsidian-wechat-capture/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/turndown": "^5.0.5",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.7.2",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "turndown": "^7.2.0"
+  }
+}
