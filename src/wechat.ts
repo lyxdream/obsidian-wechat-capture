@@ -10,6 +10,7 @@ import {
   isProbablyHtml,
   normalizeImageUrl,
   pickImageExt,
+  datePrefixForNote,
   sanitizeFilename,
   toAbsolute,
   uniqueNotePath,
@@ -318,10 +319,11 @@ export async function extractWechatArticle(
   );
 
   await ensureFolder(app.vault, normalizePath(settings.wechatFolder));
+  const noteBaseName = `${datePrefixForNote(meta.published)}-${meta.title}`;
   const notePath = await uniqueNotePath(
     app.vault,
     normalizePath(settings.wechatFolder),
-    meta.title
+    noteBaseName
   );
   await app.vault.create(notePath, noteContent);
 

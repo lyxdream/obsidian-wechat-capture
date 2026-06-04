@@ -19,6 +19,25 @@ export function formatDate(d = new Date()): string {
   return `${y}-${m}-${day}`;
 }
 
+/** 笔记文件名日期前缀（YYYY-MM-DD），优先用文章发布时间，否则用当天。 */
+export function datePrefixForNote(published?: string): string {
+  if (published) {
+    const iso = published.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+    if (iso) {
+      return `${iso[1]}-${iso[2].padStart(2, "0")}-${iso[3].padStart(2, "0")}`;
+    }
+    const slash = published.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+    if (slash) {
+      return `${slash[1]}-${slash[2].padStart(2, "0")}-${slash[3].padStart(2, "0")}`;
+    }
+    const cn = published.match(/(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+    if (cn) {
+      return `${cn[1]}-${cn[2].padStart(2, "0")}-${cn[3].padStart(2, "0")}`;
+    }
+  }
+  return formatDate();
+}
+
 export function formatDateTime(d = new Date()): string {
   const h = String(d.getHours()).padStart(2, "0");
   const min = String(d.getMinutes()).padStart(2, "0");

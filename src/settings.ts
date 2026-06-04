@@ -4,6 +4,6 @@ export interface WechatCaptureSettings {
 }
 
 export const DEFAULT_SETTINGS: WechatCaptureSettings = {
-  wechatFolder: "Inbox/公众号",
+  wechatFolder: "wechat",
   attachmentFolder: "attachments",
 };

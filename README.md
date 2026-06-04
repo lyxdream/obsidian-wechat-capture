@@ -50,7 +50,7 @@ ln -s "$(pwd)" "<你的库>/.obsidian/plugins/obsidian-wechat-capture"
 
 | 设置 | 默认值 | 说明 |
 |------|--------|------|
-| 公众号笔记目录 | `Inbox/公众号` | 文章保存位置 |
+| 公众号笔记目录 | `wechat` | 文章保存位置 |
 | 附件目录 | `attachments` | 公众号图片附件根目录 |
 
 ## 开发
