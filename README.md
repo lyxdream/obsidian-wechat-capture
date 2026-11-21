@@ -44,6 +44,24 @@ ln -s "$(pwd)" "<你的库>/.obsidian/plugins/obsidian-wechat-capture"
 2. 选择 **提取公众号文章**
 3. 粘贴链接并开始提取
 
+### 无界面调用
+
+插件注册了 Obsidian URI，可在桌面端直接传入公众号文章链接：
+
+```text
+obsidian://wechat-capture?vault=<vault-name>&url=<percent-encoded-article-url>
+```
+
+调用方应使用标准 percent-encoding。生成方式示例：
+
+```ts
+const uri =
+  "obsidian://wechat-capture?" +
+  new URLSearchParams({ vault: vaultName, url: articleUrl }).toString();
+```
+
+该入口不会打开输入弹窗，也不会在保存后自动打开笔记。Obsidian URI 没有同步返回值；调用方只能通过 Obsidian 通知或检查笔记是否生成来判断结果。
+
 ### 设置项
 
 **设置 → Wechat Capture**
